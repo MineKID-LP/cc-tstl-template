@@ -5,15 +5,28 @@
         "lib": ["ESNext"],
         "moduleResolution": "node",
         "strict": false,
-        "types": ["@jackmacwindows/lua-types/cc-5.2", "@jackmacwindows/craftos-types", "@jackmacwindows/cc-types"]
+        "types": [
+            "@jackmacwindows/lua-types/cc-5.2", 
+            "@jackmacwindows/craftos-types", 
+            "@jackmacwindows/cc-types", 
+            "./types/more_peripherals/index.d.ts"
+        ],
+        "outDir": "",
+        "plugins": [
+            {
+                "transform": "./copyLuaLibs.ts"
+            }
+        ]
     },
     "tstl": {
         "luaTarget": "CC-5.2",
-        "luaLibImport": "inline",
+        "luaLibImport": "require",
         "luaBundle": "main.lua",
-        "luaBundleEntry": "main.ts"
+        "luaBundleEntry": "./src/main.ts"
     },
     "include": [
-        "./*.ts"
-    ]
+        "./src/*.ts",
+        "./lib/*.ts"
+    ],
+    
 }

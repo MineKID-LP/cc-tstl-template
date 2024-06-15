@@ -1,0 +1,16 @@
+/// <reference path="MorePeripherals.d.ts"/>
+/// <reference path="magnetic_card_manipulator.d.ts"/>
+/// <reference path="anvil.d.ts"/>
+/// <reference path="beehive.d.ts"/>
+/// <reference path="crafter.d.ts"/>
+/// <reference path="loom.d.ts"/>
+/// <reference path="grinder.d.ts"/>
+/// <reference path="scanner.d.ts"/>
+/// <reference path="grindstone.d.ts"/>
+/// <reference path="xp_bottler.d.ts"/>
+/// <reference path="xp_collector.d.ts"/>
+/// <reference path="player_interface.d.ts"/>
+/// <reference path="spawner_interface.d.ts"/>
+/// <reference path="trading_interface.d.ts"/>
+/// <reference path="ender_chest_interface.d.ts"/>
+/// <reference path="enchanting_table.d.ts"/>

@@ -1,6 +1,6 @@
 # cc-tstl-template
 Template project for ComputerCraft programs written in TypeScript. Uses [TypeScriptToLua](https://typescripttolua.github.io) to compile with ComputerCraft typing declarations.
-This fork aims to include more typings for Peripheral Mods and tries to keep up-to-date with CC: Tweaked
+
 ## Usage
 1. Clone the repository (or download the ZIP). You can also use the [Use this template](https://github.com/MCJack123/cc-tstl-template/generate) button on GitHub to fork the repo directly.
 2. Run `npm install` to install dependencies, including TypeScriptToLua.
@@ -46,7 +46,7 @@ The `tsconfig.json` file contains some options used by TypeScriptToLua to adjust
 * `noImplicitSelf`: Controls whether functions have a `this`/`self`. By default, all functions are given a `self` parameter (even ones not in tables!) to allow JavaScript's `this` value to work. This can be disabled per-function with `/** @noSelf **/` or per-file with `/** @noSelfInFile **/`; but if you don't use `this` or don't want to have `self` added to functions, you can set this option to `true` to disable `this`/`self`.
 * `luaLibImport`: Controls how TypeScript polyfills are emitted in the Lua code. The following options are available:
   * `inline`: Inserts the only required boilerplate code in each file. This is the default, and is recommended for projects with few files. However, this may generate duplicate code in projects with lots of files.
-  * `require`: Generates a single `lualib_bundle.lua` file with all the boilerplate, and each script `require`s the file. This can generate more code than you need, however. Recommended for projects with lots of files and/or uses lots of JavaScript language features.
+  * `require`: Generates a single `lualib_bundle.lua` file with all of the boilerplate, and each script `require`s the file. This can generate more code than you need, however. Recommended for projects with lots of files and/or uses lots of JavaScript language features.
   * `always`: Appears to be the same as `require`.
   * `none`: Generates no boilerplate code. **Do not use this if you use ANY JavaScript features that do not have a 1:1 conversion to Lua.** Not recommended unless size is a major concern and TS is used simply for syntax. (You'll need to remove `event.ts` to use it.)
 * `luaLibName`: If `luaLibImport` is set to `require`, this sets the name of the output file for boilerplate. (This is useful for code targeted for Phoenix, which exports it in a library named `typescript`.)
@@ -55,4 +55,4 @@ The `tsconfig.json` file contains some options used by TypeScriptToLua to adjust
 * `luaBundleEntry`: If `luaBundle` is set, this marks the TypeScript file that should be executed. This defaults to `main.ts`.
 
 ## License
-The typings in `types/`, `lib/` and `event.ts` are licensed under the MIT license. Projects are free to use these files as provisioned under the license (i.e. do whatever you want, but include the license notice somewhere in your project). Anything else is public domain.
+The typings in `types/` and `event.ts` are licensed under the MIT license. Projects are free to use these files as provisioned under the license (i.e. do whatever you want, but include the license notice somewhere in your project). Anything else is public domain.
